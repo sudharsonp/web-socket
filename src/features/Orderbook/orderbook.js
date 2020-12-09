@@ -44,8 +44,14 @@ export function Orderbook () {
 
   return (
     <div>
-      <Table data={tableData.buy}/>
-      <Chart data={tableData.buy}/>
+      <span className="span">
+        <Table data={tableData.buy}/>
+        <Chart data={tableData.buy}/>
+      </span>
+      <span className="span">
+        <Table data={tableData.sell}/>
+        <Chart data={tableData.sell} fill= 'red' transformX="1" transformY ="1" />
+      </span>
     </div>
   )
 }

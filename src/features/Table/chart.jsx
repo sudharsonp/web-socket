@@ -10,9 +10,13 @@ import PropTypes from 'prop-types'
   fill: 'green'
 } */
 
-export const Chart = ({ data = [] }) => {
+export const Chart = ({ data = [], fill = 'green', transformX = -1, transformY = 1 }) => {
+  const style = {
+    fill,
+    transform: `scale(${transformX},${transformY})`
+  }
   return (
-    <svg className='chart'>
+    <svg className='chart' style={style}>
         {
             Array.isArray(data) && data.length && data.slice(0, 25).map(
               (ele, i) => (
@@ -25,5 +29,8 @@ export const Chart = ({ data = [] }) => {
 }
 
 Chart.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array,
+  fill: PropTypes.string,
+  transformX: PropTypes.string,
+  transformY: PropTypes.string
 }
