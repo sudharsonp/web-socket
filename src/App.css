@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -22,18 +11,22 @@
   font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.table {
+    position: absolute;
+    width: 309px;
+    height: 442px;
+    font-size: 11px;
+    border-spacing: 0;
+    box-sizing: border-box;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+.chart {
+    width: 100%;
+    height: 442px;
+    transform: scale(-1, 1);
+    z-index: 0;
+    pointer-events: none;
+    fill: green;
+    top: 17px;
+    position: relative;
 }
