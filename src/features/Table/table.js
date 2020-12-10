@@ -19,7 +19,15 @@ export const Table = ({ data = [] }) => {
         <tbody>{
              Array.isArray(data) && data.length
                ? data.slice(0, 25).map(
-                   (ele, i) => (<TableRow key={i} data={ele}/>)
+                   (ele, i) => (
+                        <TableRow
+                          key={i}
+                          price={ele.price}
+                          count={ele.count}
+                          amount={ele.amount}
+                          total={ele.total}
+                        />
+                   )
                  )
                : null
         }</tbody>

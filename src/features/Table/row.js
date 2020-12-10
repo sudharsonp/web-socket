@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
-export const TableRow = ({ data: { price, count, amount, total } }) => {
+const row = ({ price, count, amount, total }) => {
   return (
     <React.Fragment>
         <tr>
@@ -14,13 +14,15 @@ export const TableRow = ({ data: { price, count, amount, total } }) => {
   )
 }
 
+export const TableRow = memo(row)
+
 TableRow.propTypes = {
-  data: PropTypes.object
+  price: PropTypes.number,
+  count: PropTypes.number,
+  amount: PropTypes.number,
+  total: PropTypes.number
 }
 /*
 data: PropTypes.object(PropTypes.shape({
-    price: PropTypes.number,
-    count: PropTypes.number,
-    amount: PropTypes.number,
-    total: PropTypes.number
+
   })) */

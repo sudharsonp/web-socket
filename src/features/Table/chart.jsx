@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './chart.module.scss'
 
-export const Chart = ({ data = [], fill = 'green', transformX = -1, transformY = 1 }) => {
+const Diagram = ({ data = [], fill = 'green', transformX = -1, transformY = 1 }) => {
   const style = {
     fill,
     transform: `scale(${transformX},${transformY})`
@@ -20,6 +20,8 @@ export const Chart = ({ data = [], fill = 'green', transformX = -1, transformY =
     </svg>
   )
 }
+
+export const Chart = memo(Diagram)
 
 Chart.propTypes = {
   data: PropTypes.array,
