@@ -14,13 +14,13 @@ export const Table = ({ data = [] }) => {
                 <th>Price</th>
             </tr>
         </thead>
-        <tbody>
-        {
-            Array.isArray(data) && data.length && data.slice(0, 25).map(
-              (ele, i) => (<TableRow key={i} data={ele}/>)
-            )
-        }
-        </tbody>
+        <tbody>{
+             Array.isArray(data) && data.length
+               ? data.slice(0, 25).map(
+                   (ele, i) => (<TableRow key={i} data={ele}/>)
+                 )
+               : null
+        }</tbody>
     </table>
   )
 }

@@ -30,7 +30,9 @@ export const setTableAction = data => dispatch => {
 }
 
 export const updateTableAction = data => dispatch => {
-  dispatch(updateTableData(data))
+  setTimeout(() => {
+    dispatch(updateTableData(data))
+  }, 100)
 }
 
 // The function below is called a selector and allows us to select a value from

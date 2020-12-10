@@ -50,7 +50,7 @@ export function Orderbook () {
       </span>
       <span className="span">
         <Table data={tableData.sell}/>
-        <Chart data={tableData.sell} fill= 'red' transformX="1" transformY ="1" />
+        <Chart data={tableData.sell} fill="red" transformX="1" transformY ="1" />
       </span>
     </div>
   )
