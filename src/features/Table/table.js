@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 
 import { TableRow } from './row'
 
+import styles from './table.module.scss'
+
 export const Table = ({ data = [] }) => {
   return (
-    <table className="table">
+    <table className={styles.table}>
          <thead>
             <tr>
                 <th>Count</th>

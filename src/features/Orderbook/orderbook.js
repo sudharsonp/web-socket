@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Table } from '../Table/table'
 import { Chart } from '../Table/chart'
 
+import styles from './orderbook.module.scss'
+
 import {
   setTableAction,
   updateTableAction,
@@ -44,11 +46,13 @@ export function Orderbook () {
 
   return (
     <div>
-      <span className="span">
+      <span className={styles.wrapper}>
+        <span>Buy</span>
         <Table data={tableData.buy}/>
         <Chart data={tableData.buy}/>
       </span>
-      <span className="span">
+      <span className={styles.wrapper}>
+        <span>Sell</span>
         <Table data={tableData.sell}/>
         <Chart data={tableData.sell} fill="red" transformX="1" transformY ="1" />
       </span>

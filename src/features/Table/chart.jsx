@@ -1,14 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-/* const styles = {
-  width: '100%',
-  height: '408px',
-  transform: 'scale(-1, 1)',
-  zIndex: '0',
-  pointerEvents: 'none',
-  fill: 'green'
-} */
+import styles from './chart.module.scss'
 
 export const Chart = ({ data = [], fill = 'green', transformX = -1, transformY = 1 }) => {
   const style = {
@@ -16,7 +9,7 @@ export const Chart = ({ data = [], fill = 'green', transformX = -1, transformY =
     transform: `scale(${transformX},${transformY})`
   }
   return (
-    <svg className='chart' style={style}>
+    <svg className={styles.chart} style={style}>
         {
             Array.isArray(data) && data.length && data.slice(0, 25).map(
               (ele, i) => (

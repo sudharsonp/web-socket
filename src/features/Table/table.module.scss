@@ -1,0 +1,13 @@
+
+.table {
+    position: absolute;
+    width: 309px;
+    height: 442px;
+    font-size: 11px;
+    border-spacing: 0;
+    box-sizing: border-box;
+    
+    tbody tr:hover {
+        background-color: #ffff99;
+    }
+}
